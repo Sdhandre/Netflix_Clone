@@ -27,6 +27,22 @@
     top: 0;
 }
 
+.main input {
+    padding: 20px 14px;
+    font-size: 17px;
+    border: none;
+    text-align: left;
+    background-color: rgba(23, 23, 23, 0.7);
+    color: white;
+    outline: none;
+    height: 22px;
+}
+
+.main input::placeholder {
+    text-align: left;
+    font-size: 17px;
+}
+
 nav {
     max-width: 60vw;
     margin: auto;
@@ -105,12 +121,13 @@ body {
 .btn-red {
     background-color: red;
     color: white;
-    padding: 7px 30px 8px 14px;
+    padding: 3px 15px 3px 14px;
     font-size: 20px;
     border-radius: 4px;
     border-style: hidden;
     text-align: center;
     font-weight: 400;
+    height: 37px;
 }
 
 .btn:hover {
@@ -212,16 +229,34 @@ section.first>div :nth-child(2) {
     cursor: pointer;
     font-size: 24px;
     text-align: left;
+    transition: color 0.3s ease;
 }
 
 .faqbox:hover {
 
     background-color: #414141;
-
+    color: #FF4500;
 }
 
 .faqbox svg {
     filter: invert(1);
+}
+
+.answer{
+    display: none;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 24px;
+    max-width: 60vw;
+    margin: 14px auto;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    text-align: left; 
+}
+
+.faqbox:active + .answer {
+    display: block; 
 }
 
 footer {
