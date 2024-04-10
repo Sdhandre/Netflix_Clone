@@ -38,8 +38,7 @@
     height: 22px;
 }
 
-.main input::placeholder {
-    width: calc(100% - 16px);
+.main input::placeholder {  
     text-align: left;
     font-size: 17px;
 }
