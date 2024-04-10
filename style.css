@@ -39,8 +39,13 @@
 }
 
 .main input::placeholder {
+    width: calc(100% - 16px);
     text-align: left;
     font-size: 17px;
+}
+
+.main input:focus {
+    outline: 2px solid white;
 }
 
 nav {
