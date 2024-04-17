@@ -1,15 +1,23 @@
-document.querySelectorAll('.faqbox').forEach(function(item) {
-    item.addEventListener('click', function() {
-        this.classList.toggle('active');
-        
-        var answer = this.nextElementSibling;
-        if (answer.style.display === 'block') {
-            answer.style.display = 'none';
-        } else {
-            answer.style.display = 'block';
-        }
+document.addEventListener('DOMContentLoaded', function () {
+    const faqBoxes = document.querySelectorAll('.faqbox');
+
+    faqBoxes.forEach(function (faqBox) {
+        faqBox.addEventListener('click', function () {
+            this.classList.toggle('active');
+            const answer = this.nextElementSibling;
+            answer.classList.toggle('show');
+            // Calculate the height of the answer element
+            const maxHeight = answer.scrollHeight + 'px';
+            // Toggle the max-height to reveal or hide the answer
+            if (answer.style.maxHeight) {
+                answer.style.maxHeight = null;
+            } else {
+                answer.style.maxHeight = maxHeight;
+            }
+        });
     });
 });
+
 
 const dropdownButton = document.querySelector('.btn');
 const dropdownContent = document.querySelector('.dropdown-content');

@@ -38,7 +38,7 @@
     height: 22px;
 }
 
-.main input::placeholder {  
+.main input::placeholder {
     text-align: left;
     font-size: 17px;
 }
@@ -220,12 +220,13 @@ section.first>div :nth-child(2) {
     background: black;
     color: white;
     padding: 34px;
+    
 
 }
 
 .faqbox {
     display: flex;
-    transition: all 1s ease-out;
+    transition: max-height 0.5s ease;
     justify-content: space-between;
     background-color: #2d2d2d;
     padding: 24px;
@@ -234,7 +235,7 @@ section.first>div :nth-child(2) {
     cursor: pointer;
     font-size: 24px;
     text-align: left;
-    transition: color 0.3s ease;
+   
 }
 
 .faqbox:hover {
@@ -247,21 +248,28 @@ section.first>div :nth-child(2) {
     filter: invert(1);
 }
 
-.answer{
-    display: none;
-    justify-content: space-between;
+
+.answer {
     background-color: transparent;
-    padding: 24px;
+    padding: -1px;
     max-width: 60vw;
     margin: 14px auto;
     cursor: default;
     font-size: 24px;
     color: white;
-    text-align: left; 
+    text-align: left;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+ 
+
 }
 
-.faqbox:active + .answer {
-    display: block; 
+.faqbox.active+.answer,
+.answer.show {
+    max-height: 1000px;
+    /* Adjust this value as needed */
+    overflow: visible;
 }
 
 footer {
@@ -346,10 +354,12 @@ footer {
         text-align: center;
         font-size: 32px;
     }
-    footer{
+
+    footer {
         max-width: 90vw;
     }
-    .footer-item{
+
+    .footer-item {
         align-items: center;
     }
 
@@ -374,19 +384,25 @@ footer .questions {
 
 .dropdown {
     position: relative;
-    display: inline-block;
-}
+
+    transition:opacity 150ms ease-in-out;
+     
+    }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color:white;
+    background-color: white;
     min-width: 108px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    z-index:1;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
     border-radius: 4px;
-    margin-top: 1px;
-}
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+    /* Initially hidden */
+  
+    }
+
 
 .dropdown-content a {
     color: black;
@@ -395,19 +411,22 @@ footer .questions {
     display: block;
     text-align: center;
     font-size: 14px;
+    
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
+    opacity: 1;
+   
+    }
 
-.dropdown-content.show {
-    display: block;
-}
 
 .dropdown-content a:hover {
     color: red;
-}
+    transition-behavior: normal;
+      
+    }
+
 
 .arrow {
     border: solid white;
@@ -415,10 +434,10 @@ footer .questions {
     display: inline-block;
     padding: 3px;
     margin-left: 10px;
-  }
+}
 
-  .down {
+.down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     margin-bottom: 2.5px;
-  }
+}
