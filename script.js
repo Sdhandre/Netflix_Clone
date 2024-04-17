@@ -15,7 +15,6 @@ document.querySelectorAll('.faqbox').forEach(function(item) {
     });
 });
 
-
 const dropdownButton = document.querySelector('.btn');
 const dropdownContent = document.querySelector('.dropdown-content');
 console.log(dropdownButton, dropdownContent);
@@ -36,5 +35,3 @@ window.addEventListener('click', function(event) {
 dropdownContent.addEventListener('click', function(event) {
     event.stopPropagation();
 });
-
-

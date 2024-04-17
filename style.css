@@ -8,7 +8,6 @@
 }
 
 
-
 .main {
     background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/6cefb2f5-90be-4f57-adc4-f6c3c579273d/3943990c-f4e0-4147-82ad-f531e2b547f3/IN-en-20240401-popsignuptwoweeks-perspective_alpha_website_small.jpg");
     background-position: center center;
@@ -38,7 +37,7 @@
     height: 22px;
 }
 
-.main input::placeholder {
+.main input::placeholder {  
     text-align: left;
     font-size: 17px;
 }
@@ -174,7 +173,6 @@ body {
     align-items: center;
 }
 
-
 .secimg {
     position: relative;
 }
@@ -185,7 +183,6 @@ body {
     z-index: 10;
 
 }
-
 
 .secimg video {
 
@@ -220,13 +217,12 @@ section.first>div :nth-child(2) {
     background: black;
     color: white;
     padding: 34px;
-    
 
 }
 
 .faqbox {
     display: flex;
-    transition: max-height 0.5s ease;
+    transition: all 1s ease-out;
     justify-content: space-between;
     background-color: #2d2d2d;
     padding: 24px;
@@ -235,7 +231,7 @@ section.first>div :nth-child(2) {
     cursor: pointer;
     font-size: 24px;
     text-align: left;
-   
+    transition: color 0.3s ease;
 }
 
 .faqbox:hover {
@@ -256,10 +252,14 @@ section.first>div :nth-child(2) {
     cursor: default;
     font-size: 24px;
     color: white;
-    text-align: left; 
+    text-align:justify; 
+    word-spacing: 5px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
 }
 
-.faqbox:active + .answer {
+.answer.active {
     display: block; 
 }
 
@@ -278,7 +278,6 @@ footer {
 }
 
 @media screen and (max-width:1300px) {
-
 
     .footer {
         display: grid;
@@ -345,15 +344,12 @@ footer {
         text-align: center;
         font-size: 32px;
     }
-
-    footer {
+    footer{
         max-width: 90vw;
     }
-
-    .footer-item {
+    .footer-item{
         align-items: center;
     }
-
 
 
 }
@@ -375,25 +371,19 @@ footer .questions {
 
 .dropdown {
     position: relative;
-
-    transition:opacity 150ms ease-in-out;
-     
-    }
+    display: inline-block;
+}
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: white;
+    background-color:white;
     min-width: 108px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index:1;
     border-radius: 4px;
-    opacity: 0;
-    transition: opacity 150ms ease-in-out;
-    /* Initially hidden */
-  
-    }
-
+    margin-top: 1px;
+}
 
 .dropdown-content a {
     color: black;
@@ -402,22 +392,19 @@ footer .questions {
     display: block;
     text-align: center;
     font-size: 14px;
-    
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
-    opacity: 1;
-   
-    }
+}
 
+.dropdown-content.show {
+    display: block;
+}
 
 .dropdown-content a:hover {
     color: red;
-    transition-behavior: normal;
-      
-    }
-
+}
 
 .arrow {
     border: solid white;
@@ -425,9 +412,10 @@ footer .questions {
     display: inline-block;
     padding: 3px;
     margin-left: 10px;
-}
+  }
 
-.down {
+  .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
-}
+    margin-bottom: 2.5px;
+  }
