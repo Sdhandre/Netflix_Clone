@@ -1,23 +1,19 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const faqBoxes = document.querySelectorAll('.faqbox');
-
-    faqBoxes.forEach(function (faqBox) {
-        faqBox.addEventListener('click', function () {
-            this.classList.toggle('active');
-            const answer = this.nextElementSibling;
-            answer.classList.toggle('show');
-            // Calculate the height of the answer element
-            const maxHeight = answer.scrollHeight + 'px';
-            // Toggle the max-height to reveal or hide the answer
-            if (answer.style.maxHeight) {
-                answer.style.maxHeight = null;
-            } else {
-                answer.style.maxHeight = maxHeight;
-            }
-        });
+document.querySelectorAll('.faqbox').forEach(function(item) {
+    item.addEventListener('click', function() {
+        this.classList.toggle('active');
+        
+        var answer = this.nextElementSibling;
+        if (answer.classList.contains('active')) {
+            answer.style.maxHeight = '0';
+            setTimeout(() => {
+                answer.classList.remove('active');
+            }, 200); // Adjust timing to match transition duration
+        } else {
+            answer.classList.add('active');
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
     });
 });
-
 
 const dropdownButton = document.querySelector('.btn');
 const dropdownContent = document.querySelector('.dropdown-content');
@@ -39,5 +35,3 @@ window.addEventListener('click', function(event) {
 dropdownContent.addEventListener('click', function(event) {
     event.stopPropagation();
 });
-
-
