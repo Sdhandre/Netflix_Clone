@@ -419,3 +419,50 @@ footer .questions {
     -webkit-transform: rotate(45deg);
     margin-bottom: 2.5px;
   }
+
+.placeholder {
+    max-width: 60vw;
+    margin: auto;
+    padding: 34px 0;
+    text-align: center;
+    word-spacing: 2px;
+    max-height: 60px;
+}
+
+.placeholder .main-input {
+    padding: 11px 101px 11px 14px;
+    font-size: 12px;
+    border-radius: 4px;
+    text-align: left;
+    background-color: rgba(23, 23, 23, 0.7);
+    border: 1px solid rgba(246, 238, 238, 0.5);
+    color: white;
+    margin-bottom: 10px;
+}
+
+.placeholder .btn {
+    padding: 10px 20px;
+    font-weight: 600;
+    color: white;
+    background-color: rgba(248, 243, 243, 0.173);
+    border-radius: 4px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.placeholder .btn-red {
+    background-color: red;
+    color: white;
+    padding: 0px 15px 3px 14px;
+    font-size: 15px;
+    border-radius: 4px;
+    border-style: hidden;
+    text-align: center;
+    font-weight: 400;
+    height: 37px;
+}
+
+.placeholder .btn:hover {
+    background-color: #FF4500;
+}
