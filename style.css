@@ -66,6 +66,7 @@ nav img {
 
 body {
     background-color: black;
+    user-select: none;
 }
 
 .hero {
@@ -253,7 +254,7 @@ section.first>div :nth-child(2) {
     padding: 24px;
     max-width: 60vw;
     margin: 14px auto;
-    cursor: pointer;
+    cursor: default;
     font-size: 24px;
     color: white;
     text-align: left; 
@@ -370,3 +371,54 @@ footer .questions {
     flex-direction: column;
     gap: 23px;
 }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:white;
+    min-width: 108px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index:1;
+    border-radius: 4px;
+    margin-top: 1px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 4px 2px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: red;
+}
+
+.arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left: 10px;
+  }
+
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin-bottom: 2.5px;
+  }
