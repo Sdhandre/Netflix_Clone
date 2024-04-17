@@ -3,10 +3,14 @@ document.querySelectorAll('.faqbox').forEach(function(item) {
         this.classList.toggle('active');
         
         var answer = this.nextElementSibling;
-        if (answer.style.display === 'block') {
-            answer.style.display = 'none';
+        if (answer.classList.contains('active')) {
+            answer.style.maxHeight = '0';
+            setTimeout(() => {
+                answer.classList.remove('active');
+            }, 200); // Adjust timing to match transition duration
         } else {
-            answer.style.display = 'block';
+            answer.classList.add('active');
+            answer.style.maxHeight = answer.scrollHeight + 'px';
         }
     });
 });
