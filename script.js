@@ -15,6 +15,7 @@ document.querySelectorAll('.faqbox').forEach(function(item) {
     });
 });
 
+
 const dropdownButton = document.querySelector('.btn');
 const dropdownContent = document.querySelector('.dropdown-content');
 console.log(dropdownButton, dropdownContent);
