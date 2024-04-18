@@ -9,12 +9,13 @@
 
 
 .main {
-    background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/6cefb2f5-90be-4f57-adc4-f6c3c579273d/3943990c-f4e0-4147-82ad-f531e2b547f3/IN-en-20240401-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+    background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/9f46b569-aff7-4975-9b8e-3212e4637f16/453ba2a1-6138-4e3c-9a06-b66f9a2832e4/IN-en-20240415-popsignuptwoweeks-perspective_alpha_website_small.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: max(1200px, 100vw);
     height: 100vh;
     position: relative;
+    
 }
 
 .main .box {
@@ -37,7 +38,7 @@
     height: 22px;
 }
 
-.main input::placeholder {  
+.main input::placeholder {
     text-align: left;
     font-size: 17px;
 }
@@ -244,7 +245,7 @@ section.first>div :nth-child(2) {
     filter: invert(1);
 }
 
-.answer{
+.answer {
     background-color: #2d2d2d;
     padding-inline: 24px;
     max-width: 70vw;
@@ -252,7 +253,7 @@ section.first>div :nth-child(2) {
     cursor: default;
     font-size: 24px;
     color: white;
-    text-align:justify; 
+    text-align: justify;
     word-spacing: 5px;
     overflow: hidden;
     max-height: 0;
@@ -260,7 +261,7 @@ section.first>div :nth-child(2) {
 }
 
 .answer.active {
-    display: block; 
+    display: block;
 }
 
 footer {
@@ -277,7 +278,7 @@ footer {
 
 }
 
-@media screen and (max-width:1300px) {
+@media screen and (max-width:957px) {
 
     .footer {
         display: grid;
@@ -287,7 +288,7 @@ footer {
 
 }
 
-@media screen and (max-width:1300px) {
+@media screen and (max-width:957px) {
 
     .first {
         flex-wrap: wrap;
@@ -344,11 +345,21 @@ footer {
         text-align: center;
         font-size: 32px;
     }
-    footer{
+
+    footer {
         max-width: 90vw;
     }
-    .footer-item{
+
+    .footer-item {
         align-items: center;
+    }
+    .main{
+        height: 70vh;
+        position: relative;
+    }
+    .main .box{
+        height: 70vh;
+
     }
 
 
@@ -377,10 +388,10 @@ footer .questions {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color:white;
+    background-color: white;
     min-width: 108px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    z-index:1;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
     border-radius: 4px;
     margin-top: 1px;
 }
@@ -412,13 +423,13 @@ footer .questions {
     display: inline-block;
     padding: 3px;
     margin-left: 10px;
-  }
+}
 
-  .down {
+.down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     margin-bottom: 2.5px;
-  }
+}
 
 .placeholder {
     max-width: 60vw;

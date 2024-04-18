@@ -1,7 +1,7 @@
-document.querySelectorAll('.faqbox').forEach(function(item) {
-    item.addEventListener('click', function() {
+document.querySelectorAll('.faqbox').forEach(function (item) {
+    item.addEventListener('click', function () {
         this.classList.toggle('active');
-        
+
         var answer = this.nextElementSibling;
         if (answer.classList.contains('active')) {
             answer.style.maxHeight = '0';
@@ -19,12 +19,12 @@ const dropdownButton = document.querySelector('.btn');
 const dropdownContent = document.querySelector('.dropdown-content');
 console.log(dropdownButton, dropdownContent);
 
-dropdownButton.addEventListener('click', function(event) {
+dropdownButton.addEventListener('click', function (event) {
     event.stopPropagation();
     dropdownContent.classList.toggle('show');
 });
 
-window.addEventListener('click', function(event) {
+window.addEventListener('click', function (event) {
     if (!event.target.matches('.btn')) {
         if (dropdownContent.classList.contains('show')) {
             dropdownContent.classList.remove('show');
@@ -32,6 +32,11 @@ window.addEventListener('click', function(event) {
     }
 });
 
-dropdownContent.addEventListener('click', function(event) {
+dropdownContent.addEventListener('click', function (event) {
     event.stopPropagation();
+});
+document.getElementById("getStartedButton").addEventListener("click", function () {
+    var email = document.getElementById("emailInput").value;
+    // Redirect to the real Netflix website
+    window.location.href = "https://www.netflix.com/";
 });
