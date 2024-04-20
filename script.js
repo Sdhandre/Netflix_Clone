@@ -35,8 +35,15 @@ window.addEventListener('click', function (event) {
 dropdownContent.addEventListener('click', function (event) {
     event.stopPropagation();
 });
+
 document.getElementById("getStartedButton").addEventListener("click", function () {
-    var email = document.getElementById("emailInput").value;
-    // Redirect to the real Netflix website
     window.location.href = "https://www.netflix.com/";
+});
+
+document.getElementById("getStartedButtonDown").addEventListener("click", function () {
+    window.location.href = "https://www.netflix.com/";
+});
+
+document.getElementById("signInButton").addEventListener("click", function () {
+    window.location.href = "https://www.netflix.com/login";
 });
