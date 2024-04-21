@@ -40,10 +40,6 @@ document.getElementById("getStartedButton").addEventListener("click", function (
     window.location.href = "https://www.netflix.com/";
 });
 
-document.getElementById("getStartedButtonDown").addEventListener("click", function () {
-    window.location.href = "https://www.netflix.com/";
-});
-
 document.getElementById("signInButton").addEventListener("click", function () {
     window.location.href = "https://www.netflix.com/login";
 });
