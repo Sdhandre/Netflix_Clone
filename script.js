@@ -36,14 +36,39 @@ dropdownContent.addEventListener('click', function (event) {
     event.stopPropagation();
 });
 
-document.getElementById("getStartedButton").addEventListener("click", function () {
-    window.location.href = "https://www.netflix.com/";
-});
+document.addEventListener('DOMContentLoaded', function () {
+    
+  var egetStartedButton = document.getElementById("egetStartedButton");
+  if (egetStartedButton) {
+      egetStartedButton.addEventListener("click", function () {
+          window.location.href = "https://www.netflix.com/in";
+      });
+  }
 
-document.getElementById("signInButton").addEventListener("click", function () {
-    window.location.href = "https://www.netflix.com/login";
-});
 
+  var hindigetStartedButton = document.getElementById("hindigetStartedButton");
+  if (hindigetStartedButton) {
+      hindigetStartedButton.addEventListener("click", function () {
+          window.location.href = "https://www.netflix.com/in-hi/";
+      });
+  }
+
+  
+  var esignInButton = document.getElementById("esignInButton");
+  if (esignInButton) {
+      esignInButton.addEventListener("click", function () {
+          window.location.href = "https://www.netflix.com/login";
+      });
+  }
+
+ 
+  var hindisignInButton = document.getElementById("hindisignInButton");
+  if (hindisignInButton) {
+      hindisignInButton.addEventListener("click", function () {
+          window.location.href = "https://www.netflix.com/login";
+      });
+  }
+});
 
 var scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
